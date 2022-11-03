@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Lesson_14__UITextField___NotificationCenter_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите почту" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K4Q-qS-fwn">
+                                <rect key="frame" x="139" y="279" width="136" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="136" id="9a7-rD-cAp"/>
+                                    <constraint firstAttribute="height" constant="34" id="rmY-1i-6d2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GlS-MQ-02O">
+                                <rect key="frame" x="139" y="328" width="136" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="136" id="FZm-CZ-Bgh"/>
+                                    <constraint firstAttribute="height" constant="34" id="sBD-Y8-pke"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zDG-Th-28V">
+                                <rect key="frame" x="174.5" y="397" width="65" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="RKf-WY-vK7"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Войти"/>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="applelogo" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="BFK-Wx-ONm">
+                                <rect key="frame" x="157" y="144.5" width="100" height="98.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="RjL-DW-McY"/>
+                                    <constraint firstAttribute="height" constant="100" id="WkG-jf-cnf"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="GlS-MQ-02O" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4dX-Fg-uYB"/>
+                            <constraint firstItem="GlS-MQ-02O" firstAttribute="top" secondItem="K4Q-qS-fwn" secondAttribute="bottom" constant="15" id="AMc-mz-RL0"/>
+                            <constraint firstItem="zDG-Th-28V" firstAttribute="top" secondItem="GlS-MQ-02O" secondAttribute="bottom" constant="35" id="BTy-Od-Nkb"/>
+                            <constraint firstItem="BFK-Wx-ONm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EFK-5F-x2X"/>
+                            <constraint firstItem="K4Q-qS-fwn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RR3-CW-pVQ"/>
+                            <constraint firstItem="zDG-Th-28V" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WFP-7J-ZXM"/>
+                            <constraint firstItem="BFK-Wx-ONm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="cI3-Gf-oLP"/>
+                            <constraint firstItem="K4Q-qS-fwn" firstAttribute="top" secondItem="BFK-Wx-ONm" secondAttribute="bottom" constant="35" id="lwV-Op-8he"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="K4Q-qS-fwn" id="cpD-s6-otV"/>
+                        <outlet property="passwordTextField" destination="GlS-MQ-02O" id="Rbl-S4-czB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="34.782608695652179" y="97.767857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="applelogo" catalog="system" width="103" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
