@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Lesson_16__UIWebView___UIActivityIndicator___openPdf_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uu8-Tl-CK2">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hz9-4y-Bcq">
+                                <rect key="frame" x="0.0" y="818" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem systemItem="rewind" id="0eV-CE-idH">
+                                        <connections>
+                                            <action selector="goBackAction:" destination="BYZ-38-t0r" id="v8p-L7-ttj"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="OaB-Nc-5Zi"/>
+                                    <barButtonItem systemItem="fastForward" id="6fI-Do-5XD">
+                                        <connections>
+                                            <action selector="goForwardAction:" destination="BYZ-38-t0r" id="sXR-i4-IKc"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="viv-Sc-fPm"/>
+                                    <barButtonItem systemItem="refresh" id="xqA-MJ-4B2">
+                                        <connections>
+                                            <action selector="refreshAction:" destination="BYZ-38-t0r" id="xvG-s7-6Gc"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <color key="barTintColor" systemColor="systemRedColor"/>
+                            </toolbar>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="ENM-3j-jfL">
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ENM-3j-jfL" firstAttribute="centerX" secondItem="uu8-Tl-CK2" secondAttribute="centerX" id="1vt-rv-yXu"/>
+                            <constraint firstAttribute="bottom" secondItem="uu8-Tl-CK2" secondAttribute="bottom" id="4X4-7Y-T91"/>
+                            <constraint firstItem="uu8-Tl-CK2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Gbk-Hd-v59"/>
+                            <constraint firstAttribute="trailing" secondItem="uu8-Tl-CK2" secondAttribute="trailing" id="SXc-Fx-S7Z"/>
+                            <constraint firstItem="ENM-3j-jfL" firstAttribute="centerY" secondItem="uu8-Tl-CK2" secondAttribute="centerY" id="eYT-iB-sCm"/>
+                            <constraint firstItem="uu8-Tl-CK2" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="p7b-UU-u7c"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="goBackItem" destination="0eV-CE-idH" id="6al-ZJ-jLE"/>
+                        <outlet property="goForwardItem" destination="6fI-Do-5XD" id="TKz-Pr-TIJ"/>
+                        <outlet property="loadIndicator" destination="ENM-3j-jfL" id="OGG-Tl-dZ1"/>
+                        <outlet property="refreshItem" destination="xqA-MJ-4B2" id="cb3-QQ-xiC"/>
+                        <outlet property="webView" destination="uu8-Tl-CK2" id="JJU-8n-ahF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="34.782608695652179" y="97.767857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
